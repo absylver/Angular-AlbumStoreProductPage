@@ -8,6 +8,9 @@ import {
 } from '@angular/http';
 
 import 'rxjs/add/operator/map';
+import { from } from 'rxjs/observable/from';
+
+import {Album} from './album'
 
 @Injectable()
 export class ProductService {
