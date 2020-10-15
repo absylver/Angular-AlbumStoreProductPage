@@ -8,12 +8,20 @@ import {
 } from '@angular/http';
 
 import 'rxjs/add/operator/map';
-import { from } from 'rxjs/observable/from';
-import { observableToBeFn } from 'rxjs/testing/TestScheduler';
+import {
+  from
+} from 'rxjs/observable/from';
+import {
+  observableToBeFn
+} from 'rxjs/testing/TestScheduler';
 
-import {Album} from './album'
+import {
+  Album
+} from './album';
 
-import { Observable } from 'rxjs/Observable'
+import {
+  Observable
+} from 'rxjs/Observable'
 
 @Injectable()
 export class ProductService {
@@ -22,9 +30,10 @@ export class ProductService {
 
   constructor(private _http: Http) {}
 
-  getAlbum(id: number): Observable<Album> {
+  getAlbum(id: number): Observable < Album > {
     return this._http.get(this._albumUrl).map((response) =>
-      <Album>response.json());
+      <
+      Album > response.json());
   }
 
 }
